@@ -9,17 +9,17 @@ import org.springframework.dao.DataAccessException;
 public interface InfoTableDao 
 {
     // InfoTableテーブルにデータを1件insert
-    public int insertOne(InfoTable infoTable) throws DataAccessException;
+    int insertOne(InfoTable infoTable) throws DataAccessException;
 
     // InfoTableテーブルのデータを1件取得
-    public InfoTable selectOne(int No) throws DataAccessException;
+    InfoTable selectOne(int No) throws DataAccessException;
 
     // InfoTableテーブルの全データを取得
-    public List<InfoTable> selectMany() throws DataAccessException;
+    List<InfoTable> selectMany() throws DataAccessException;
 
     // InfoTableテーブルを1件更新
-    public int updateOne(InfoTable infoTable) throws DataAccessException;
+    int updateOne(InfoTable infoTable) throws DataAccessException;
 
     // InfoTableテーブルを1件削除
-    public int deleteOne(String No) throws DataAccessException;
+    int deleteOne(String No) throws DataAccessException;
 }
