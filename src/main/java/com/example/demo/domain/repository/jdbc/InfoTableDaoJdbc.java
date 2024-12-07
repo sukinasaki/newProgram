@@ -31,7 +31,7 @@ public class InfoTableDaoJdbc implements InfoTableDao
 
     // InfoTableテーブルのデータを1件取得
     @Override
-    public InfoTable selectOne(String infoTableId) throws DataAccessException
+    public InfoTable selectOne(int infoTableId) throws DataAccessException
     {
         // 1件取得
         Map<String, Object> map = jdbc.queryForMap("SELECT * FROM infoTable" + " WHERE No = ?", infoTableId);
@@ -51,7 +51,7 @@ public class InfoTableDaoJdbc implements InfoTableDao
     public List<InfoTable> selectMany() throws DataAccessException
     {
         // INFOTABLEテーブルのデータを全件取得
-        List<Map<String, Object>> getList = jdbc.queryForList("SELECT * FROM m_infoTable");
+        List<Map<String, Object>> getList = jdbc.queryForList("SELECT * FROM infoTable");
         // 結果返却用の変数
         List<InfoTable> infoTableList = new ArrayList<>();
         // 取得したデータを結果返却用のListに格納していく

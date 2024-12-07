@@ -12,7 +12,7 @@ public interface InfoTableDao
     public int insertOne(InfoTable infoTable) throws DataAccessException;
 
     // InfoTableテーブルのデータを1件取得
-    public InfoTable selectOne(String No) throws DataAccessException;
+    public InfoTable selectOne(int No) throws DataAccessException;
 
     // InfoTableテーブルの全データを取得
     public List<InfoTable> selectMany() throws DataAccessException;

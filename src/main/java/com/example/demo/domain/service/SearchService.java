@@ -40,10 +40,10 @@ public class SearchService
     }
 
     // 1件取得用メソッド
-    public InfoTable selectOne(String infoTableId)
+    public InfoTable selectOne(int No)
     {
         // selectOne実行
-        return dao.selectOne(infoTableId);
+        return dao.selectOne(No);
     }
 
     // 1件更新メソッド

@@ -38,7 +38,7 @@ public class SearchController {
 
     // 1件取得用メソッド
     @GetMapping("/selectOne/{id:[0-9]+}")
-    public InfoTable selectOne(@PathVariable("id") String No)
+    public InfoTable selectOne(@PathVariable("id") int No)
     {
         // selectOne実行
         return searchService.selectOne(No);
